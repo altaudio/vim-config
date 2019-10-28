@@ -18,9 +18,6 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
 
-" fzf
-let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
 " NERDTree Settings
 let g:NERDTreeWinSize=50
 let NERDTreeShowHidden=1
