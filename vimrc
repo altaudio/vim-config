@@ -7,12 +7,14 @@ color PaperColor
 syntax on
 filetype plugin indent on
 filetype plugin on
-set number
+set rnu
+set nu
 set shiftwidth=2
 set autoread
 set incsearch
 set wildignore+=**/node_modules/**/*
 set wildignore+=**/dist/**/*
+set wildignore+=**/vendor/**/*
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2
@@ -73,10 +75,18 @@ inoremap `<CR>  `<CR>`<Esc>O
 inoremap ``     ``
 
 "JS Snippets
+inoremap <TAB>map .map(item => item)<Esc>?item<cr>n
+inoremap <TAB>fe .forEach(item => item)<Esc>?item<cr>n
+inoremap <TAB>fil .filter(item => item)<Esc>?item<cr>n
+
 inoremap <TAB>imp import  from '';<Esc>2bhi
 inoremap <TAB>impc import {  } from '';<Esc>?{<cr>lli
-inoremap <TAB>cl console.log();<Esc>ba
+
+inoremap <TAB>cl console.log()<Esc>ba
+
 inoremap <TAB>const  const  =;<Esc>bhi
+inoremap <TAB>let  let  =;<Esc>bhi
+
 inoremap <TAB>af  () => 
 inoremap <TAB>af<CR>  () => {<CR>}<Esc>O
 inoremap <TAB>aaf  async () => 
@@ -89,6 +99,8 @@ inoremap <TAB>imr import React from 'react';
 inoremap <TAB>imgu import {  } from 'gather-content-ui';<Esc>?{<cr>la
 inoremap <TAB>impt import {  } from 'prop-types';<Esc>?{<cr>la
 inoremap <TAB>rfc<CR> const  = () => (<CR>)<Esc>O
+inoremap <TAB>prop propName={} <Esc>?prop<cr>ce
+inoremap <TAB>sprop propName="" <Esc>?prop<cr>ce
 
 "Test Snippets
 inoremap <TAB>de describe('', () => {<CR>});<Esc>?'<cr>i
