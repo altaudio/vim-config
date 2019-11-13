@@ -75,43 +75,6 @@ inoremap `      ``<Left>
 inoremap `<CR>  `<CR>`<Esc>O
 inoremap ``     ``
 
-"JS Snippets
-"inoremap <TAB>map .map(item => item)<Esc>?item<cr>n
-"inoremap <TAB>fe .forEach(item => item)<Esc>?item<cr>n
-"inoremap <TAB>fil .filter(item => item)<Esc>?item<cr>n
-
-"inoremap <TAB>imp import  from '';<Esc>2bhi
-"inoremap <TAB>impc import {  } from '';<Esc>?{<cr>lli
-
-"inoremap <TAB>cl console.log()<Esc>ba
-
-"inoremap <TAB>const  const  =;<Esc>bhi
-"inoremap <TAB>let  let  =;<Esc>bhi
-
-"inoremap <TAB>af  () => 
-"inoremap <TAB>af<CR>  () => {<CR>}<Esc>O
-"inoremap <TAB>aaf  async () => 
-"inoremap <TAB>aaf<CR>  async () => {<CR>}<Esc>O
-"inoremap <TAB>caf const  = () =><Esc>3bhi
-"inoremap <TAB>caf<CR> const  = () => {<CR>}<Esc>4bhi
-
-"React Snippets
-"inoremap <TAB>imr import React from 'react';
-"inoremap <TAB>imgu import {  } from 'gather-content-ui';<Esc>?{<cr>la
-"inoremap <TAB>impt import {  } from 'prop-types';<Esc>?{<cr>la
-"inoremap <TAB>rfc<CR> const  = () => (<CR>)<Esc>O
-"inoremap <TAB>prop propName={} <Esc>?prop<cr>ce
-"inoremap <TAB>sprop propName="" <Esc>?prop<cr>ce
-
-"Test Snippets
-"inoremap <TAB>de describe('', () => {<CR>});<Esc>?'<cr>i
-"inoremap <TAB>it it('', () => {<CR>});<Esc>?'<cr>i
-"inoremap <TAB>te test('', () => {<CR>});<Esc>?'<cr>i
-
-"inoremap <TAB>ade describe('', async () => {<CR>});<Esc>?'<cr>i
-"inoremap <TAB>ait it('', async () => {<CR>});<Esc>?'<cr>i
-"inoremap <TAB>ate test('', async () => {<CR>});<Esc>?'<cr>i
-
 " Test Commands
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>

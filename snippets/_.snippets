@@ -14,7 +14,27 @@ snippet imp
 	import ${1} from '${2}';
 snippet impc
 	import { ${1} } from '${2}';
-
+" Arrays
+snippet map
+	map(${1} => ${2})
+snippet fe
+	forEach(${1} => ${2})
+snippet fil
+	filter(${1} => ${2})
+"Debugging
+snippet cl
+	console.log(${1})
+"Functions
+snippet af
+	(${1}) => ${2}
+snippet aaf
+	async (${1}) => {
+	  ${2}
+	}
+snippet caf
+	const ${1} = (${2}) => {
+	  ${3}
+	}
 " React
 snippet rc
 	import React from 'react';
@@ -33,3 +53,40 @@ snippet rc
 	};
 
 	export default $1;
+snippet imgu
+	import { ${1} } from 'gather-content-ui'
+snippet impt
+	import { ${1} } from 'prop-types'
+snippet prop
+	${1}={${2}}
+snippet sprop
+	${1}="${2}"
+snippet aprop
+	${1}={[${2}]}
+snippet fprop
+	${1}={(${2}) => ${3}}
+"Tests
+snippet de
+	describe('${1}', () => {
+	  ${2}
+	})
+snippet it
+	it('${1}', () => {
+	  ${2}
+	})
+snippet test
+	test('${1}', () => {
+	  ${2}
+	})
+snippet ade
+	 describe('${1}', async () => {
+	  ${2}
+	})
+snippet ait
+	it('${1}', async () => {
+	  ${2}
+	})
+snippet atest
+	test('${1}', async () => {
+	  ${2}
+	})
