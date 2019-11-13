@@ -1,0 +1,35 @@
+" JS
+snippet con
+	const ${1} = ${2};
+snippet ocon
+	const ${1} = {
+	  ${2}: ${3}
+	};
+snippet let
+	let ${1} = ${2};
+snippet ok
+	${1}: ${2},
+
+snippet imp
+	import ${1} from '${2}';
+snippet impc
+	import { ${1} } from '${2}';
+
+" React
+snippet rc
+	import React from 'react';
+	import { $3 } from 'prop-types';
+
+	const ${1:Component} = ({ ${2:prop} }) => {
+	  return (
+	    <div>
+	      Hi
+	    </div>
+	  )
+	};
+
+	$1.propTypes = {
+	  $2: ${3:bool},
+	};
+
+	export default $1;
