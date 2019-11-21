@@ -1,44 +1,45 @@
 " JS
 snippet con
-	const ${1} = ${2};
+	const ${1} = ${0}
 snippet ocon
 	const ${1} = {
-	  ${2}: ${3}
-	};
+	  ${2}: ${3},${0}
+	}
+snippet acon
+	const ${1} = [${0}]
 snippet let
-	let ${1} = ${2};
+	let ${1} = ${0}
 snippet ok
-	${1}: ${2},
-
+	${1}: ${0},
 snippet imp
-	import ${1} from '${2}';
+	import ${1} from '${0}';
 snippet impc
-	import { ${1} } from '${2}';
+	import { ${1} } from '${0}'
 " Arrays
 snippet map
-	map(${1} => ${2})
+	map(${1} => ${0})
 snippet fe
-	forEach(${1} => ${2})
+	forEach(${1} => ${0})
 snippet fil
-	filter(${1} => ${2})
+	filter(${1} => ${0})
 "Debugging
 snippet cl
-	console.log(${1})
+	console.log(${0})
 "Functions
 snippet af
-	(${1}) => ${2}
+	(${1}) => ${0}
 snippet aaf
 	async (${1}) => {
-	  ${2}
+	  ${0}
 	}
 snippet caf
 	const ${1} = (${2}) => {
-	  ${3}
+	  ${0}
 	}
 " React
 snippet rc
 	import React from 'react';
-	import { $3 } from 'prop-types';
+	import { $0 } from 'prop-types';
 
 	const ${1:Component} = ({ ${2:prop} }) => {
 	  return (
@@ -49,47 +50,55 @@ snippet rc
 	};
 
 	$1.propTypes = {
-	  $2: ${3:bool},
+	  $2: ${0:bool},
 	};
 
 	export default $1;
 snippet imgu
-	import { ${1} } from 'gather-content-ui'
+	import { ${0} } from 'gather-content-ui'
 snippet impt
-	import { ${1} } from 'prop-types'
+	import { ${0} } from 'prop-types'
 snippet prop
-	${1}={${2}}
+	${1}={${0}}
 snippet sprop
-	${1}="${2}"
+	${1}="${0}"
 snippet aprop
-	${1}={[${2}]}
+	${1}={[${0}]}
 snippet fprop
-	${1}={(${2}) => ${3}}
+	${1}={(${2}) => ${0}}
 " Hooks
 snippet us
-	const [${1}, ${1/\\(.\\)\\(.\\)/\\1/}] = useState(${2}) 
+	const [${1}, ${1/\<./set\u&/g}] = useState(${0}) 
+snippet ud
+	const dispatch = useDispatch()
+snippet us
+	const ${1} = useSelector(${0})
+snippet ue
+	useEffect(() => {
+	  ${0}
+	}, []) 
 "Tests
 snippet de
 	describe('${1}', () => {
-	  ${2}
+	  ${0}
 	})
 snippet it
 	it('${1}', () => {
-	  ${2}
+	  ${0}
 	})
 snippet test
 	test('${1}', () => {
-	  ${2}
+	  ${0}
 	})
 snippet ade
 	 describe('${1}', async () => {
-	  ${2}
+	  ${0}
 	})
 snippet ait
 	it('${1}', async () => {
-	  ${2}
+	  ${0}
 	})
 snippet atest
 	test('${1}', async () => {
-	  ${2}
+	  ${0}
 	})

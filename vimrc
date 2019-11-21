@@ -28,7 +28,8 @@ command NTF NERDTreeFind
 
 
 " SnipMate
-"let g:snipMate.snippet_version = 1
+let g:snipMate = {}
+let g:snipMate.snippet_version = 1
 
 " Navigate between splits
 nnoremap <C-J> <C-W><C-J>
