@@ -26,6 +26,7 @@ let NERDTreeShowHidden=1
 command NT NERDTree
 command NTF NERDTreeFind
 
+" Ctags Settings
 
 " SnipMate
 let g:snipMate = {}
