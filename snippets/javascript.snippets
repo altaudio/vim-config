@@ -65,6 +65,9 @@ snippet aprop
 	${1}={[${2}]}
 snippet fprop
 	${1}={(${2}) => ${3}}
+" Hooks
+snippet us
+	const [${1}, ${1/\\(.\\)\\(.\\)/\\1/}] = useState(${2}) 
 "Tests
 snippet de
 	describe('${1}', () => {

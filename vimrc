@@ -23,6 +23,12 @@ let g:netrw_winsize = 25
 " NERDTree Settings
 let g:NERDTreeWinSize=50
 let NERDTreeShowHidden=1
+command NT NERDTree
+command NTF NERDTreeFind
+
+
+" SnipMate
+"let g:snipMate.snippet_version = 1
 
 " Navigate between splits
 nnoremap <C-J> <C-W><C-J>
