@@ -12,6 +12,8 @@ set nu
 set shiftwidth=2
 set autoread
 set incsearch
+set nofoldenable
+set foldmethod=indent
 set wildignore+=**/node_modules/**/*
 set wildignore+=**/dist/**/*
 set wildignore+=**/vendor/**/*
