@@ -1,4 +1,6 @@
 " JS
+snippet econ
+	export const ${1} = ${0}
 snippet con
 	const ${1} = ${0}
 snippet ocon
@@ -15,6 +17,24 @@ snippet imp
 	import ${1} from '${0}';
 snippet impc
 	import { ${1} } from '${0}'
+snippet tc
+	try {
+	  ${1}
+	} catch (error) {
+	  ${0}
+	}
+snippet if
+	if ($1) {
+	  ${0}
+	}
+snippet else
+	else {
+	  ${0}
+	}
+snippet elseif
+	else if (${1}) {
+	  ${0}
+	}
 " Arrays
 snippet map
 	map(${1} => ${0})
@@ -36,28 +56,35 @@ snippet caf
 	const ${1} = (${2}) => {
 	  ${0}
 	}
+snippet acaf
+	const ${1} = async (${2}) => {
+	  ${0}
+	}
 " React
 snippet rc
 	import React from 'react';
-	import { $0 } from 'prop-types';
 
-	const ${1:Component} = ({ ${2:prop} }) => {
+	const ${1:Component} = () => {
 	  return (
-	    <div>
-	      Hi
-	    </div>
+	    ${0}
 	  )
-	};
+	}
 
-	$1.propTypes = {
-	  $2: ${0:bool},
-	};
-
-	export default $1;
+	export { $1 }
+snippet pt
+	${1}.propTypes = {
+	  ${2}: ${0}
+	}
+snippet dp
+	${1}.defaultProps = {
+	  ${2}: ${0}
+	}
 snippet imgu
 	import { ${0} } from 'gather-content-ui'
 snippet impt
 	import { ${0} } from 'prop-types'
+snippet impr
+	import React from 'react'${0}
 snippet prop
 	${1}={${0}}
 snippet sprop
