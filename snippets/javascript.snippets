@@ -67,6 +67,14 @@ snippet acaf
 	const ${1} = async (${2}) => {
 	  ${0}
 	}
+snippet ecaf
+	export const ${1} = (${2}) => {
+	  ${0}
+	}
+snippet eacaf
+	export const ${1} = async (${2}) => {
+	  ${0}
+	}
 "Styled Components
 snippet impsc
 	import styled from 'styled-components'
@@ -112,6 +120,8 @@ snippet us
 	const [${1}, ${1/\<./set\u&/g}] = useState(${0}) 
 snippet ud
 	const dispatch = useDispatch()
+snippet uc
+	const ${1} = useContext(${0})
 snippet ur
 	const ${1} = useRef(${0})
 snippet usel
@@ -121,6 +131,35 @@ snippet ue
 	  ${0}
 	}, []) 
 "Tests
+snippet tf
+	import {
+	  cleanup,
+	  fireEvent,
+	  waitForElement,
+	  waitForElementToBeRemoved
+	} from '@testing-library/react';
+	import { React } from 'tests/helpers';
+	import { renderWithRedux } from 'tests/renderWithRedux';
+	import appState from 'test/mocks/appState'
+	import ${1} from '${2}';
+
+	describe('${0}', () => {
+	  const render = (state = {}) =>
+	    renderWithRedux(<${1} />, {
+	      initialState: {
+		...appState,
+		...state
+	      }
+	    });
+
+	  beforeEach(() => {
+	  });
+
+	  afterEach(() => {
+	    jest.restoreAllMocks();
+	    cleanup();
+	  });
+	});
 snippet de
 	describe('${1}', () => {
 	  ${0}
@@ -143,5 +182,13 @@ snippet ait
 	})
 snippet atest
 	test('${1}', async () => {
+	  ${0}
+	})
+snippet be
+	beforeEach(() => {
+	  ${0}
+	})
+snippet ae
+	afterEach(() => {
 	  ${0}
 	})
