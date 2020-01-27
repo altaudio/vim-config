@@ -40,8 +40,10 @@ snippet elseif
 	  ${0}
 	}
 " HTML
-snippet tag
+snippet tags
 	<${1}>${0}</$1>
+snippet tag
+	<${1}/>${0}
 " Arrays
 snippet map
 	map(${1} => ${0})
@@ -82,6 +84,8 @@ snippet shtml
 	import styled from 'styled-components'
 
 	export const ${1} = styled.${0}``
+snippet ith
+	\${props => props.theme.${0}}
 " React
 snippet rc
 	import React from 'react';
